@@ -253,7 +253,7 @@ p {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, var(--forest-dark) 0%, var(--primary-green) 100%);
+
     overflow: hidden;
 }
 
