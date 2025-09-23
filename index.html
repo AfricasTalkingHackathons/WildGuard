@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WildGuard - Africa's Living Wildlife Conservation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-shield-alt"></i>
+                <span>WildGuard</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#problem" class="nav-link">Problem</a></li>
+                <li><a href="#solution" class="nav-link">Solution</a></li>
+                <li><a href="#report" class="nav-link">Report</a></li>
+                <li><a href="#database" class="nav-link">Database</a></li>
+                <li><a href="#community" class="nav-link">Community</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="highlight">WildGuard</span><br>
+                    Africa's Living Wildlife Conservation
+                </h1>
+                <p class="hero-description">
+                    Empowering communities and conservation teams with real-time wildlife intelligence.
+                    Together, we protect Africa's biodiversity through smart, community-driven conservation.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#report" class="btn btn-primary">
+                        <i class="fas fa-plus-circle"></i> Report Sighting
+                    </a>
+                    <a href="#solution" class="btn btn-secondary">
+                        <i class="fas fa-info-circle"></i> Learn More
+                    </a>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="15000">0</span>
+                    <span class="stat-label">Wildlife Reports</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="500">0</span>
+                    <span class="stat-label">Communities Engaged</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="1200">0</span>
+                    <span class="stat-label">Threats Prevented</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problem" class="problem">
+        <div class="container">
+            <h2 class="section-title">The Conservation Challenge</h2>
+            <p class="section-description">
+                Africa's wildlife faces unprecedented threats, but current conservation efforts are fragmented and
+                reactive.
+            </p>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Fragmented Data</h3>
+                    <p>Wildlife sightings and threat information scattered across NGOs, rangers, and communities with no
+                        unified system.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Slow Response</h3>
+                    <p>By the time threats are reported, damage is done. Patrols waste resources without predictive
+                        insights.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Low Community Engagement</h3>
+                    <p>Local communities lack safe, rewarding channels to contribute despite having the best ground
+                        intelligence.</p>
+                </div>
+            </div>
+            <div class="impact-stats">
+                <div class="impact-item">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>Poaching costs Africa billions annually in lost eco-tourism</span>
+                </div>
+                <div class="impact-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>70% mobile penetration in rural Africa represents untapped conservation potential</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solution" class="solution">
+        <div class="container">
+            <h2 class="section-title">The WildGuard Solution</h2>
+            <p class="section-description">
+                A mobile-first wildlife database that transforms community reports into actionable conservation
+                intelligence.
+            </p>
+            <div class="solution-grid">
+                <div class="solution-feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Collect Reports</h3>
+                    <p>Communities and rangers log poaching incidents, habitat threats, and wildlife sightings via USSD,
+                        SMS, or Voice - no internet required.</p>
+                </div>
+                <div class="solution-feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Build Database</h3>
+                    <p>Each verified report updates a central record of animal movements, threats, and habitat
+                        conditions.</p>
+                </div>
+                <div class="solution-feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Provide Intelligence</h3>
+                    <p>Live maps and historical trends help rangers plan smarter patrols and interventions.</p>
+                </div>
+                <div class="solution-feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3>Incentivize Participation</h3>
+                    <p>Verified reports earn airtime rewards and recognition badges, building a trusted local network.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wildlife Gallery -->
+    <section id="wildlife" class="wildlife-gallery">
+        <div class="container">
+            <h2 class="section-title">Protected Wildlife</h2>
+            <div class="gallery-grid" id="wildlife-gallery">
+                <!-- Wildlife images will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Report Section -->
+    <section id="report" class="report-section">
+        <div class="container">
+            <h2 class="section-title">Report Wildlife Activity</h2>
+            <div class="report-container">
+                <div class="report-form-container">
+                    <form id="wildlife-report-form" class="report-form">
+                        <div class="form-group">
+                            <label for="report-type">Report Type</label>
+                            <select id="report-type" required>
+                                <option value="">Select type</option>
+                                <option value="wildlife-sighting">Wildlife Sighting</option>
+                                <option value="poaching">Poaching Incident</option>
+                                <option value="habitat-threat">Habitat Threat</option>
+                                <option value="human-conflict">Human-Wildlife Conflict</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="animal-type">Animal/Species</label>
+                            <select id="animal-type">
+                                <option value="">Select species</option>
+                                <option value="elephant">Elephant</option>
+                                <option value="lion">Lion</option>
+                                <option value="rhino">Rhinoceros</option>
+                                <option value="leopard">Leopard</option>
+                                <option value="giraffe">Giraffe</option>
+                                <option value="zebra">Zebra</option>
+                                <option value="buffalo">Buffalo</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="location">Location</label>
+                                <input type="text" id="location" placeholder="Village, landmark, or coordinates"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="urgency">Urgency Level</label>
+                                <select id="urgency" required>
+                                    <option value="">Select urgency</option>
+                                    <option value="low">Low - Routine sighting</option>
+                                    <option value="medium">Medium - Requires attention</option>
+                                    <option value="high">High - Immediate action needed</option>
+                                    <option value="critical">Critical - Emergency</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <textarea id="description" rows="4"
+                                placeholder="Describe what you observed, including number of animals, behavior, and any threats..."
+                                required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact">Contact Information (Optional)</label>
+                            <input type="text" id="contact" placeholder="Phone number for follow-up">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-paper-plane"></i> Submit Report
+                        </button>
+                    </form>
+                </div>
+                <div class="report-info">
+                    <h3>How to Report</h3>
+                    <div class="report-method">
+                        <i class="fas fa-mobile-alt"></i>
+                        <div>
+                            <h4>USSD Code</h4>
+                            <p>Dial <strong>*456*WILD#</strong> from any mobile phone</p>
+                        </div>
+                    </div>
+                    <div class="report-method">
+                        <i class="fas fa-sms"></i>
+                        <div>
+                            <h4>SMS</h4>
+                            <p>Send SMS to <strong>40456</strong> with format: WILD [TYPE] [LOCATION]</p>
+                        </div>
+                    </div>
+                    <div class="report-method">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Voice Call</h4>
+                            <p>Call <strong>0800-WILD-GUARD</strong> for urgent reports</p>
+                        </div>
+                    </div>
+                    <div class="emergency-notice">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <p><strong>Emergency:</strong> For immediate danger, call local authorities first, then report
+                            to WildGuard.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Database Section -->
+    <section id="database" class="database-section">
+        <div class="container">
+            <h2 class="section-title">Wildlife Intelligence Dashboard</h2>
+            <div class="dashboard-container">
+                <div class="dashboard-sidebar">
+                    <div class="filter-section">
+                        <h3>Filters</h3>
+                        <div class="filter-group">
+                            <label>Report Type</label>
+                            <div class="filter-options">
+                                <label><input type="checkbox" class="filter-checkbox" data-filter="sighting" checked>
+                                    Sightings</label>
+                                <label><input type="checkbox" class="filter-checkbox" data-filter="threat" checked>
+                                    Threats</label>
+                                <label><input type="checkbox" class="filter-checkbox" data-filter="conflict" checked>
+                                    Conflicts</label>
+                            </div>
+                        </div>
+                        <div class="filter-group">
+                            <label>Time Period</label>
+                            <select class="time-filter">
+                                <option value="7">Last 7 days</option>
+                                <option value="30" selected>Last 30 days</option>
+                                <option value="90">Last 3 months</option>
+                                <option value="365">Last year</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="recent-reports">
+                        <h3>Recent Reports</h3>
+                        <div id="recent-reports-list">
+                            <!-- Reports will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard-main">
+                    <div class="map-container">
+                        <div id="wildlife-map" class="map-placeholder">
+                            <i class="fas fa-map"></i>
+                            <p>Interactive Wildlife Map</p>
+                            <small>Live tracking of wildlife movements and threat locations</small>
+                        </div>
+                    </div>
+                    <div class="dashboard-stats">
+                        <div class="stat-card">
+                            <h4>This Month</h4>
+                            <div class="stat-value">234</div>
+                            <div class="stat-label">New Reports</div>
+                        </div>
+                        <div class="stat-card">
+                            <h4>Active Threats</h4>
+                            <div class="stat-value danger">12</div>
+                            <div class="stat-label">Require Action</div>
+                        </div>
+                        <div class="stat-card">
+                            <h4>Communities</h4>
+                            <div class="stat-value">89</div>
+                            <div class="stat-label">Contributing</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section id="community" class="community">
+        <div class="container">
+            <h2 class="section-title">Community Champions</h2>
+            <p class="section-description">
+                Recognizing our top wildlife guardians and their contributions to conservation.
+            </p>
+            <div class="community-grid">
+                <div class="community-stats">
+                    <div class="community-stat">
+                        <i class="fas fa-award"></i>
+                        <h3>Rewards System</h3>
+                        <p>Earn airtime credits and recognition badges for verified reports. Top contributors receive
+                            special conservation training opportunities.</p>
+                    </div>
+                    <div class="community-stat">
+                        <i class="fas fa-users"></i>
+                        <h3>Local Networks</h3>
+                        <p>Join community conservation groups in your area. Share knowledge and coordinate protection
+                            efforts with fellow guardians.</p>
+                    </div>
+                    <div class="community-stat">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Training Programs</h3>
+                        <p>Access wildlife identification guides, reporting best practices, and conservation education
+                            materials.</p>
+                    </div>
+                </div>
+                <div class="leaderboard">
+                    <h3>Top Contributors This Month</h3>
+                    <div class="leaderboard-list" id="leaderboard">
+                        <!-- Leaderboard will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Headquarters</h3>
+                            <p>Nairobi, Kenya<br>Wildlife Conservation Center</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Emergency Hotline</h3>
+                            <p>0800-WILD-GUARD<br>24/7 Wildlife Emergency Response</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email Support</h3>
+                            <p>support@wildguard.africa<br>partnerships@wildguard.africa</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <h3>Send us a Message</h3>
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="">Select Topic</option>
+                            <option value="partnership">Partnership Inquiry</option>
+                            <option value="support">Technical Support</option>
+                            <option value="training">Training Request</option>
+                            <option value="feedback">Feedback</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>WildGuard</span>
+                    </div>
+                    <p>Protecting Africa's wildlife through community-driven conservation intelligence.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Conservation</h4>
+                        <ul>
+                            <li><a href="#report">Report Wildlife</a></li>
+                            <li><a href="#database">View Database</a></li>
+                            <li><a href="#community">Join Community</a></li>
+                            <li><a href="#">Conservation Guide</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#contact">Contact Us</a></li>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Training</a></li>
+                            <li><a href="#">Partners</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                            <li><a href="#">Data Protection</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 WildGuard. All rights reserved. Made with ❤️ for Africa's wildlife.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Report Submitted Successfully!</h3>
+            <p>Thank you for contributing to wildlife conservation. Your report has been received and will be verified
+                by our team.</p>
+            <div class="reward-info">
+                <i class="fas fa-gift"></i>
+                <span>You've earned 50 airtime credits!</span>
+            </div>
+            <button class="btn btn-primary" onclick="closeModal()">Continue</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
