@@ -1,0 +1,17 @@
+{
+  "name": "WildGuard1.0",
+  "version": "1.0.0",
+  "lockfileVersion": 3,
+  "requires": true,
+  "author": "Rhodah Mulera",
+  "description": "WildGuard frontend - HTML, CSS, JS (to connect with backend later)",
+  "license": "MIT",
+  "main": "index.js",
+  "packages": {},
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "scripts": {
+    "start": "live-server --open=./index.html"
+  }
+}
