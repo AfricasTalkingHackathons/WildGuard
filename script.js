@@ -265,6 +265,109 @@ function initReportForm() {
     });
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+    // ===== Summary Metrics =====
+    const summaryMetrics = [
+        { name: "Total Reports", value: 156 },
+        { name: "Pending Reports", value: 12 },
+        { name: "Verified Today", value: 8 },
+        { name: "Active Threats", value: 3 },
+        { name: "Online Rangers", value: 5 },
+        { name: "Sensor Alerts", value: 2 }
+    ];
+
+    const summaryContainer = document.getElementById("summary-metrics");
+    summaryMetrics.forEach(metric => {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+            <h3>${metric.name}</h3>
+            <p class="counter" data-target="${metric.value}">0</p>
+        `;
+        summaryContainer.appendChild(card);
+    });
+
+    // ===== Sensor Metrics =====
+    const sensorMetrics = [
+        { name: "Total Sensors", value: 25 },
+        { name: "Online", value: 23 },
+        { name: "Alerting", value: 2 },
+        { name: "Low Battery", value: 1 }
+    ];
+
+    const sensorContainer = document.getElementById("sensor-metrics");
+    sensorMetrics.forEach(sensor => {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+            <h3>${sensor.name}</h3>
+            <p class="counter" data-target="${sensor.value}">0</p>
+        `;
+        sensorContainer.appendChild(card);
+    });
+
+    // ===== Recent Reports =====
+    const recentReports = [
+        { type: "Poaching", priority: "Urgent", location: "-2.153456, 34.678901", description: "Gunshots near River Camp", time: "2025-09-23 13:45", phone: "+254712345678", trust: 92, distance: "2.3km" },
+        { type: "Wildlife Sighting", priority: "Normal", location: "-1.234567, 35.678901", description: "Herd of elephants", time: "2025-09-23 12:00", phone: "+254798765432", trust: 88, distance: "5km" }
+        // Add more reports as needed
+    ];
+
+    const reportsTable = document.getElementById("recent-reports");
+    recentReports.forEach(report => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+            <td>${report.type}</td>
+            <td class="${report.priority === 'Urgent' ? 'priority-urgent' : ''}">${report.priority}</td>
+            <td>${report.location}</td>
+            <td>${report.description}</td>
+            <td>${report.time}</td>
+            <td>${report.phone}</td>
+            <td>${report.trust}</td>
+            <td>${report.distance}</td>
+        `;
+        reportsTable.appendChild(row);
+    });
+
+    // ===== Threat Predictions =====
+    const threatPredictions = [
+        { type: "Poaching Risk", score: 0.87, location: "-2.150000, 34.680000", timeWindow: "Next 6h", factors: "Historical Incidents, Night Activity", action: "Immediate Patrol (Urgent)" },
+        { type: "Habitat Threat", score: 0.65, location: "-1.500000, 35.000000", timeWindow: "Next 12h", factors: "Deforestation", action: "Monitor Area" }
+    ];
+
+    const threatTable = document.getElementById("threat-predictions");
+    threatPredictions.forEach(threat => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+            <td>${threat.type}</td>
+            <td>${threat.score}</td>
+            <td>${threat.location}</td>
+            <td>${threat.timeWindow}</td>
+            <td>${threat.factors}</td>
+            <td class="${threat.action.includes('Urgent') ? 'priority-urgent' : ''}">${threat.action}</td>
+        `;
+        threatTable.appendChild(row);
+    });
+
+    // ===== Animate Counters =====
+    const counters = document.querySelectorAll(".counter");
+    counters.forEach(counter => {
+        const updateCount = () => {
+            const target = +counter.getAttribute("data-target");
+            const count = +counter.innerText;
+            const increment = Math.ceil(target / 200);
+
+            if (count < target) {
+                counter.innerText = count + increment;
+                setTimeout(updateCount, 20);
+            } else {
+                counter.innerText = target;
+            }
+        };
+        updateCount();
+    });
+});
+
 // Dashboard functionality
 function initDashboard() {
     const recentReportsList = document.getElementById('recent-reports-list');
