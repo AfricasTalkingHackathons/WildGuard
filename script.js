@@ -157,7 +157,7 @@ function initWildlifeGallery() {
         {
             name: 'African Lion',
             status: 'threatened',
-            image: 'https://images.pexels.com/photos/162140/lion-africa-animal-safari-162140.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
+            image: 'https://www.pexels.com/photo/majestic-african-lion-close-up-in-natural-habitat-34004589.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop',
             description: 'King of the savanna, apex predator of African ecosystems.'
         },
         {
