@@ -34,20 +34,24 @@ function initNavigation() {
         });
     });
 
-    // Smooth scrolling for navigation links
+    // Smooth scrolling ONLY for same-page anchors
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
-            e.preventDefault();
             const targetId = link.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
 
-            if (targetSection) {
-                const offsetTop = targetSection.offsetTop - 70;
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
+            if (targetId && targetId.startsWith('#')) {
+                e.preventDefault();
+                const targetSection = document.querySelector(targetId);
+
+                if (targetSection) {
+                    const offsetTop = targetSection.offsetTop - 70;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
             }
+            // If href is another page (like rangers.html), let browser handle it
         });
     });
 
@@ -82,6 +86,7 @@ function initNavigation() {
         });
     });
 }
+
 
 // Animation initialization
 function initAnimations() {
