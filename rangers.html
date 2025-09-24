@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rangers Dashboard</title>
+    <title>Rangers Dashboard - WildGuard</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 
@@ -50,115 +52,165 @@
             </div>
 
             <!-- Summary Metrics -->
-            <div class="metrics">
+            <div class="metrics" id="dashboard-metrics">
                 <div class="card">
                     <h3>Total Reports</h3>
-                    <p>156</p>
+                    <p id="total-reports">Loading...</p>
                 </div>
                 <div class="card">
                     <h3>Pending Reports</h3>
-                    <p>12</p>
+                    <p id="pending-reports">Loading...</p>
                 </div>
                 <div class="card">
                     <h3>Verified Today</h3>
-                    <p>8</p>
+                    <p id="verified-today">Loading...</p>
                 </div>
                 <div class="card">
                     <h3>Active Threats</h3>
-                    <p>3</p>
+                    <p id="active-threats">Loading...</p>
                 </div>
                 <div class="card">
                     <h3>Online Rangers</h3>
-                    <p>5</p>
+                    <p id="online-rangers">Loading...</p>
                 </div>
                 <div class="card">
                     <h3>Sensor Alerts</h3>
-                    <p>2</p>
+                    <p id="sensor-alerts">Loading...</p>
                 </div>
             </div>
 
             <!-- Recent Reports Table -->
             <div class="activity-table">
-                <h2>Recent Reports</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Type</th>
-                            <th>Priority</th>
-                            <th>Location</th>
-                            <th>Description</th>
-                            <th>Reported At</th>
-                            <th>Reporter Phone</th>
-                            <th>Trust Score</th>
-                            <th>Distance</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Poaching</td>
-                            <td class="priority-urgent">Urgent</td>
-                            <td>-2.153456, 34.678901</td>
-                            <td>Gunshots heard near River Camp</td>
-                            <td>2025-09-23 13:45</td>
-                            <td>+254712345678</td>
-                            <td>92</td>
-                            <td>2.3km</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table-header">
+                    <h2>Recent Reports</h2>
+                    <div class="filters">
+                        <select id="status-filter">
+                            <option value="">All Status</option>
+                            <option value="pending">Pending</option>
+                            <option value="verified">Verified</option>
+                            <option value="investigating">Investigating</option>
+                            <option value="rejected">Rejected</option>
+                        </select>
+                        <select id="priority-filter">
+                            <option value="">All Priorities</option>
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                            <option value="urgent">Urgent</option>
+                        </select>
+                        <button id="refresh-reports" class="btn btn-secondary">
+                            <i class="fas fa-refresh"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table id="reports-table">
+                        <thead>
+                            <tr>
+                                <th>Type</th>
+                                <th>Priority</th>
+                                <th>Location</th>
+                                <th>Description</th>
+                                <th>Reported At</th>
+                                <th>Reporter</th>
+                                <th>Trust Score</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="reports-tbody">
+                            <tr>
+                                <td colspan="8" class="loading">Loading reports...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
 
             <!-- Threat Predictions -->
             <div class="threat-predictions">
                 <h2>Threat Predictions</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Type</th>
-                            <th>Risk Score</th>
-                            <th>Location</th>
-                            <th>Time Window</th>
-                            <th>Factors</th>
-                            <th>Recommended Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Poaching Risk</td>
-                            <td>0.87</td>
-                            <td>-2.150000, 34.680000</td>
-                            <td>Next 6h</td>
-                            <td>Historical Incidents, Night Activity</td>
-                            <td class="priority-urgent">Immediate Patrol (Urgent)</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table-container">
+                    <table id="threats-table">
+                        <thead>
+                            <tr>
+                                <th>Type</th>
+                                <th>Risk Score</th>
+                                <th>Location</th>
+                                <th>Time Window</th>
+                                <th>Confidence</th>
+                                <th>Recommended Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="threats-tbody">
+                            <tr>
+                                <td colspan="6" class="loading">Loading threat predictions...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
 
             <!-- Sensor Status -->
             <div class="sensor-status">
-                <h2>Sensor Status</h2>
-                <div class="metrics">
+                <h2>Sensor Network Status</h2>
+                <div class="metrics" id="sensor-metrics">
                     <div class="card">
                         <h3>Total Sensors</h3>
-                        <p>25</p>
+                        <p id="total-sensors">Loading...</p>
                     </div>
                     <div class="card">
                         <h3>Online</h3>
-                        <p>23</p>
+                        <p id="sensors-online">Loading...</p>
                     </div>
                     <div class="card">
                         <h3>Alerting</h3>
-                        <p>2</p>
+                        <p id="sensors-alerting">Loading...</p>
                     </div>
                     <div class="card">
                         <h3>Low Battery</h3>
-                        <p>1</p>
+                        <p id="sensors-low-battery">Loading...</p>
                     </div>
+                </div>
+            </div>
+
+            <!-- Real-time Alerts -->
+            <div class="real-time-alerts">
+                <h2>Real-time Alerts</h2>
+                <div id="alerts-container" class="alerts-container">
+                    <div class="alert-status">Connecting to alert stream...</div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Report Verification Modal -->
+    <div id="verification-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeVerificationModal()">&times;</span>
+            <h3>Verify Report</h3>
+            <div id="report-details"></div>
+            <div class="verification-actions">
+                <button id="verify-btn" class="btn btn-success" onclick="verifyReport('verify')">
+                    <i class="fas fa-check"></i> Verify
+                </button>
+                <button id="investigate-btn" class="btn btn-warning" onclick="verifyReport('investigate')">
+                    <i class="fas fa-search"></i> Investigate
+                </button>
+                <button id="reject-btn" class="btn btn-danger" onclick="verifyReport('reject')">
+                    <i class="fas fa-times"></i> Reject
+                </button>
+            </div>
+            <div class="verification-form">
+                <textarea id="verification-notes" placeholder="Add notes about this verification..."></textarea>
+                <div class="reward-input">
+                    <label for="reward-amount">Reward Amount (Credits):</label>
+                    <input type="number" id="reward-amount" min="0" max="200" value="50">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="rangers.js"></script>
 </body>
 
 </html>
